@@ -1,15 +1,15 @@
-APE: utils工具包
+APE: web工具包
 ========================
 
 ```{bash}
-npm install ape-utils
+npm install ape-web
 ```
 
 ## API
 
-+ utils.js   工具集接口
-+ job.js     任务管理工具包
-+ num.js     计算工具
++ dao.js   DAO层接口
++ service.js     服务层接口
++ web.js     Web层接口
 
 ## demo
 
