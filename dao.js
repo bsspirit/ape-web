@@ -25,7 +25,17 @@ exports.pageDao = function (params, page, limit,order,dir){
     obj.order = obj.order || (order || "id");
     obj.dir = obj.dir || (dir || "DESC");
 
-    obj.order_sql =" ORDER BY a." + obj.order+" "+obj.dir;
+
+    if (obj.order instanceof Array) {
+        obj.order_sql = " ORDER BY "
+        _.each(obj.order, function (e,i) {
+            obj.order_sql += " a."+ e + " "+obj.dir[i]+",";
+        })
+        obj.order_sql = obj.order_sql.substr(0,obj.order_sql.length-1);
+    } else {
+        obj.order_sql =" ORDER BY a." + obj.order+" "+obj.dir;
+    }
+
     obj.limit_sql =" LIMIT " + obj.offset+","+obj.limit;
     obj.order_limit =  obj.order_sql + obj.limit_sql;
     return obj;

@@ -15,6 +15,10 @@ function pageDao_test(){
 
     obj = dao.pageDao(params, 1, 40, 'name', 'ASC');
     console.log(obj);
+
+    obj = dao.pageDao(params, 1, 40, ['id','name'], ['DESC','ASC']);
+    console.log(obj);
+
 }
 
 pageDao_test();
