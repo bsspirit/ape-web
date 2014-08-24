@@ -68,7 +68,7 @@ exports.whereDao = function(params,arr){
  * @params name 表名
  * @params prefix 表前缀名
  */
-function tableName(name,prefix){
+exports.tableName = function(name,prefix){
     return  prefix + name;
 }
 
