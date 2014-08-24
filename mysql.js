@@ -61,3 +61,14 @@ exports.whereDao = function(params,arr){
     });
     return where;
 }
+
+/**
+ * 封装表名
+ *
+ * @params name 表名
+ * @params prefix 表前缀名
+ */
+function tableName(name,prefix){
+    return  prefix + name;
+}
+

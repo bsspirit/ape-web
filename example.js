@@ -3,7 +3,7 @@
 //////////////////////////////////////////
 // dao
 //////////////////////////////////////////
-var dao = require('./index.js').dao;
+var dao = require('./index.js').mysql;
 
 function pageDao_test(){
     var params={'id':1,'name':'aa','page':2};
